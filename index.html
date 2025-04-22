@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>BISAYA</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"/>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-color: white;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    .navbar-custom {
+      background-color: #8c0001;
+      padding: 10px 20px;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    }
+
+    .navbar-custom .nav-link {
+      color: white;
+      font-weight: bold;
+      padding: 8px 12px;
+    }
+
+    .navbar-custom .nav-link:hover {
+      color: #f8d7da;
+    }
+
+    .logo-img {
+      height: 50px;
+    }
+
+    .search-btn {
+      background-color: white;
+      color: #c8102e;
+      font-weight: bold;
+      margin-left: 10px;
+    }
+
+    .search-btn:hover {
+      background-color: #f8d7da;
+    }
+
+    .nav-links-group {
+      display: flex;
+      align-items: center;
+      margin-left: auto;
+    }
+
+    .search-container {
+      display: flex;
+      margin-left: 20px;
+    }
+
+    .container-relative {
+      position: relative;
+      text-align: center;
+    }
+
+    .main-image {
+      width: 100%;
+      max-width: 750px;
+      display: block;
+    }
+
+    .building-title {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      font-size: 28px;
+      font-weight: bold;
+      color: black;
+      text-align: right;
+    }
+
+    .content-section {
+      display: flex;
+      justify-content: center;
+      align-items: flex-start;
+      gap: 20px;
+      padding: 40px 20px 10px;
+      flex-wrap: wrap;
+    }
+
+    .floor-labels {
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+
+    .floor-labels a {
+      text-decoration: none;
+      color: #333;
+      font-size: 15px;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+
+    .floor-labels a:hover {
+      color: #8c0001;
+    }
+
+    .legend {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 30px;
+      flex-wrap: wrap;
+    }
+
+    .legend-item {
+      display: flex;
+      align-items: center;
+      font-size: 14px;
+    }
+
+    .legend-circle {
+      width: 14px;
+      height: 14px;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .legend-entrance { background-color: #00bfff; }
+    .legend-exit { background-color: #8b0000; }
+    .legend-rooms { background-color: #ffd700; }
+    .legend-stairs { background-color: #ffa500; }
+    .legend-canteen { background-color: #006400; }
+    .legend-parking { background-color: #808080; }
+
+    .footer-bar {
+      background-color: #610505;
+      color: white;
+      padding: 10px;
+      text-align: center;
+      font-size: 12px;
+    }
+
+    footer {
+      background-color: #8c0001;
+      color: white;
+      padding: 30px 0;
+      text-align: center;
+      margin-top: auto;
+    }
+
+    footer i {
+      margin-right: 8px;
+    }
+
+    .footer-content {
+      max-width: 1100px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    @media (max-width: 768px) {
+      .building-title {
+        font-size: 20px;
+        top: 10px;
+        right: 10px;
+      }
+
+      .floor-labels {
+        align-items: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg navbar-custom">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="banner-desktop.png" alt="LPU Logo" class="logo-img" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarContent">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarContent">
+        <div class="nav-links-group">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" href="#">HOME</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">ABOUT</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="faq.html">FAQ</a>
+            </li>
+          </ul>
+          <div class="search-container">
+            <input class="form-control" type="search" placeholder="Search" />
+            <button class="btn search-btn" type="submit">Search</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Floor Labels + Building Image -->
+  <div class="content-section">
+    <!-- Left: Floor labels (clickable) -->
+    <div class="floor-labels">
+      <a href="#">7th floor</a>
+      <a href="#">6th floor</a>
+      <a href="#">5th floor</a>
+      <a href="#">4th floor</a>
+      <a href="#">3rd floor</a>
+      <a href="#">2nd floor</a>
+      <a href="#">Ground floor</a>
+    </div>
+
+    <!-- Right: Building image with label -->
+    <div class="container-relative">
+      <img src="bldg.png" alt="COECSA Building" class="main-image" />
+      <!-- <div class="building-title">
+        COECSA<br>Building
+      </div> -->
+    </div>
+  </div>
+
+  <!-- Legend -->
+  <div class="legend">
+    <div class="legend-item"><div class="legend-circle legend-entrance"></div>Entrance</div>
+    <div class="legend-item"><div class="legend-circle legend-exit"></div>Exit</div>
+    <div class="legend-item"><div class="legend-circle legend-rooms"></div>Rooms</div>
+    <div class="legend-item"><div class="legend-circle legend-stairs"></div>Stairs</div>
+    <div class="legend-item"><div class="legend-circle legend-canteen"></div>Canteen</div>
+    <div class="legend-item"><div class="legend-circle legend-parking"></div>Parking</div>
+  </div>
+
+  <!-- Info Bar (just above the footer) -->
+  
+  <!-- Footer -->
+  <footer>
+    <div class="footer-content">
+      <div><i class="bi bi-telephone-fill"></i> Contact: Jollibee if nagugutom na</div>
+      <div><i class="bi bi-envelope-fill"></i> Email: imissyou@gmail.com</div>
+      <div>
+        <i class="bi bi-facebook"></i> Facebook |
+        <i class="bi bi-twitter"></i> Twitter |
+        <i class="bi bi-instagram"></i> Instagram
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
